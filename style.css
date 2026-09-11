@@ -1,0 +1,200 @@
+/* --- VARIABLES Y RESET --- */
+:root {
+    --primary-blue: #0077b6; /* Celeste Industrial */
+    --secondary-blue: #00b4d8;
+    --dark-blue: #03045e;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --gray-text: #4a4a4a;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--white);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* --- NAVEGACIÓN --- */
+header {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 0.8rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.logo img { height: 60px; }
+
+nav ul { display: flex; list-style: none; }
+
+nav ul li { margin-left: 2rem; }
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+nav ul li a:hover { color: var(--primary-blue); }
+
+/* --- HERO SECTION --- */
+.hero {
+    background: linear-gradient(rgba(3, 4, 94, 0.7), rgba(0, 119, 182, 0.7)), 
+                url('https://via.placeholder.com/1920x1080'); /* REEMPLAZAR CON FOTO DE PLANTA */
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 10%;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 850px;
+    margin-bottom: 2.5rem;
+    color: #e0e0e0;
+}
+
+.btn {
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.btn-primary { background: var(--secondary-blue); color: white; }
+.btn-primary:hover { background: var(--primary-blue); transform: scale(1.05); }
+
+.btn-outline { border: 2px solid white; color: white; margin-left: 1rem; }
+.btn-outline:hover { background: white; color: var(--dark-blue); }
+
+/* --- SECCIONES GENERALES --- */
+section { padding: 6rem 10%; }
+
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-blue);
+}
+
+.section-title p {
+    color: var(--gray-text);
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* --- GRID DE CARDS --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.card {
+    background: var(--white);
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: var(--transition);
+    border: 1px solid #eee;
+}
+
+.card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
+
+.card img { height: 220px; width: 100%; object-fit: cover; }
+
+.card-content { padding: 1.5rem; }
+
+.card-content h3 {
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+/* --- SERVICIOS / PRODUCTOS --- */
+.service-item {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 4rem 10% 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-info h4 { margin-bottom: 1.5rem; color: var(--secondary-blue); }
+.footer-info p { font-size: 0.9rem; opacity: 0.8; }
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem;
+    font-size: 0.8rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    header { flex-direction: column; }
+    nav ul { margin-top: 1rem; }
+    nav ul li { margin: 0 10px; }
+}
