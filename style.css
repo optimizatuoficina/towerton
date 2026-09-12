@@ -176,7 +176,7 @@ nav ul li a:hover { color: var(--primary-blue); }
 /* --- HERO SECTION --- */
 .hero {
     background: linear-gradient(rgba(3, 4, 94, 0.7), rgba(0, 119, 182, 0.7)), 
-                url('https://via.placeholder.com/1920x1080'); /* REEMPLAZAR CON FOTO DE PLANTA */
+                url('imagenes/foto17-grande.jpg');
     background-size: cover;
     background-position: center;
     min-height: 80vh;
