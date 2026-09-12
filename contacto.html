@@ -9,7 +9,16 @@
 <body>
 
     <header>
-        <div class="logo"><img src="imagenes/logo_towerton.jpg" alt="Logo Towerton"></div>
+        <div class="header-left">
+            <div class="logo">
+                <img src="imagenes/logo_towerton.jpg" alt="Logo Towerton">
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -22,14 +31,13 @@
     </header>
 
     <!-- SECCIÓN HERO DE CONTACTO -->
-    <section style="background: linear-gradient(rgba(3, 4, 94, 0.8), rgba(0, 119, 182, 0.8)), url('https://via.placeholder.com/1920x1080'); background-size: cover; color: white; text-align: center; padding: 8rem 10%;">
-        <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">¿Listo para llevar tu enfriamiento al siguiente nivel?</h2>
-        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2.5rem;">Hablá con nuestros expertos hoy mismo. Brindamos asesoría técnica inmediata para proyectos de cualquier escala.</p>
+    <section class="hero-contacto">
+        <h2 class="contact-title">¿Listo para llevar tu enfriamiento al siguiente nivel?</h2>
+        <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 2.5rem;">Hablá con nuestros expertos hoy mismo. Brindamos asesoría técnica inmediata para proyectos de cualquier escala.</p>
         
         <!-- BOTÓN WHATSAPP PRINCIPAL -->
         <a href="https://wa.me/541147298922?text=Hola,%20me%20gustaría%20recibir%20asesoramiento%20técnico%20sobre%20torres%20de%20enfriamiento." 
-           class="btn btn-primary" 
-           style="background-color: #25D366; font-size: 1.4rem; padding: 1.5rem 3rem;">
+           class="btn btn-whatsapp">
            Chat por WhatsApp ahora
         </a>
     </section>
@@ -42,34 +50,28 @@
         </div>
         <div class="grid-container">
             <!-- Sede Central -->
-            <div class="card">
-                <div style="padding: 1.5rem;">
-                    <h3 style="color: var(--primary-blue);">Sede Central (CABA)</h3>
-                    <p>Cerrito 146 – Piso 7º<br>
-                    (C1010AAD) Ciudad Autónoma de Buenos Aires<br><br>
-                    <strong>Tel./Fax:</strong> 4381-0122 / 4383-9492 / 4383-9881</p>
-                </div>
+            <div class="card location-card">
+                <h3 style="color: var(--primary-blue);">Sede Central (CABA)</h3>
+                <p>Cerrito 146 – Piso 7º<br>
+                (C1010AAD) Ciudad Autónoma de Buenos Aires<br><br>
+                <strong>Tel./Fax:</strong> 4381-0122 / 4383-9492 / 4383-9881</p>
             </div>
 
             <!-- Establecimiento Fabril -->
-            <div class="card">
-                <div style="padding: 1.5rem;">
-                    <h3 style="color: var(--primary-blue);">Establecimiento Fabril</h3>
-                    <p>Calle 194 Nº 1348<br>
-                    (B1655AOH) José León Suárez, Buenos Aires<br><br>
-                    <strong>Tel./Fax:</strong> 4729-8922 / 4729-9000 / 4729-9009</p>
-                </div>
+            <div class="card location-card">
+                <h3 style="color: var(--primary-blue);">Establecimiento Fabril</h3>
+                <p>Calle 194 Nº 1348<br>
+                (B1655AOH) José León Suárez, Buenos Aires<br><br>
+                <strong>Tel./Fax:</strong> 4729-8922 / 4729-9000 / 4729-9009</p>
             </div>
 
             <!-- Paraguay -->
-            <div class="card">
-                <div style="padding: 1.5rem;">
-                    <h3 style="color: var(--primary-blue);">Paraguay</h3>
-                    <p>SUDIMEX S.R.L.<br>
-                    Diagonal Dr. Carlos Centurión 355, Asunción<br><br>
-                    <strong>Tel/Fax:</strong> (595-21) 555552<br>
-                    <strong>E-mail:</strong> sudimex@sudimex.com.py</p>
-                </div>
+            <div class="card location-card">
+                <h3 style="color: var(--primary-blue);">Paraguay</h3>
+                <p>SUDIMEX S.R.L.<br>
+                Diagonal Dr. Carlos Centurión 355, Asunción<br><br>
+                <strong>Tel/Fax:</strong> (595-21) 555552<br>
+                <strong>E-mail:</strong> sudimex@sudimex.com.py</p>
             </div>
         </div>
     </section>
@@ -84,13 +86,41 @@
     </section>
 
     <footer>
-        <div class="footer-info">
-            <div><h4>Sede Central</h4><p>Cerrito 146, Piso 7º, CABA</p></div>
-            <div><h4>Establecimiento Fabril</h4><p>Calle 194 Nº 1348, José León Suárez</p></div>
-            <div><h4>Contacto Directo</h4><p>E-mail: towerton@towerton.com.ar</p></div>
+        <div class="footer-grid">
+            <div>
+                <h4>Sede Central</h4>
+                <p>Cerrito 146, Piso 7º, CABA<br>Tel: 4381-0122</p>
+            </div>
+            <div>
+                <h4>Establecimiento Fabril</h4>
+                <p>Calle 194 Nº 1348, José León Suárez<br>Tel: 4729-9000</p>
+            </div>
+            <div>
+                <h4>Contacto Directo</h4>
+                <p>E-mail: towerton@towerton.com.ar<br>Web: www.towerton.com</p>
+            </div>
         </div>
-        <div class="copyright">&copy; 2026 Towerton S.A. - Todos los derechos reservados.</div>
+        <div class="copyright">
+            &copy; 2026 Towerton S.A. - Soluciones en Torres de Enfriamiento. Todos los derechos reservados.
+        </div>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('menu-active');
+        });
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('menu-active');
+            });
+        });
+    </script>
 
 </body>
 </html>

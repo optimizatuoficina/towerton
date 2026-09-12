@@ -9,7 +9,16 @@
 <body>
 
     <header>
-        <div class="logo"><img src="imagenes/logo_towerton.jpg" alt="Logo Towerton"></div>
+        <div class="header-left">
+            <div class="logo">
+                <img src="imagenes/logo_towerton.jpg" alt="Logo Towerton">
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -72,13 +81,41 @@
     </section>
 
     <footer>
-        <div class="footer-info">
-            <div><h4>Sede Central</h4><p>Cerrito 146, Piso 7º, CABA<br>Tel: 4381-0122</p></div>
-            <div><h4>Establecimiento Fabril</h4><p>Calle 194 Nº 1348, José León Suárez<br>Tel: 4729-9000</p></div>
-            <div><h4>Contacto Directo</h4><p>E-mail: towerton@towerton.com.ar<br>Web: www.towerton.com</p></div>
+        <div class="footer-grid">
+            <div>
+                <h4>Sede Central</h4>
+                <p>Cerrito 146, Piso 7º, CABA<br>Tel: 4381-0122</p>
+            </div>
+            <div>
+                <h4>Establecimiento Fabril</h4>
+                <p>Calle 194 Nº 1348, José León Suárez<br>Tel: 4729-9000</p>
+            </div>
+            <div>
+                <h4>Contacto Directo</h4>
+                <p>E-mail: towerton@towerton.com.ar<br>Web: www.towerton.com</p>
+            </div>
         </div>
-        <div class="copyright">&copy; 2026 Towerton S.A. - Todos los derechos reservados.</div>
+        <div class="copyright">
+            &copy; 2026 Towerton S.A. - Soluciones en Torres de Enfriamiento. Todos los derechos reservados.
+        </div>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('menu-active');
+        });
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('menu-active');
+            });
+        });
+    </script>
 
 </body>
 </html>
