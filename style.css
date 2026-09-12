@@ -158,6 +158,16 @@ header {
 
 .logo img { height: 60px; }
 
+.logo {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.logo:hover {
+    opacity: 0.85;
+}
+
 nav ul { display: flex; list-style: none; }
 
 nav ul li { margin-left: 2rem; }
